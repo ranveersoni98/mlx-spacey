@@ -1,0 +1,26 @@
+[project]
+name = "mlx-spacey"
+version = "0.1.0"
+description = "Hunt exoplanets with MLX and raw TESS light curves"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Ranveer Soni", email = "git@ranveersoni.me" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "mlx>=0.32.3",
+    "numpy>=1.26.0",
+    "lightkurve>=2.4.0",
+    "astropy>=6.0.0",
+    "matplotlib>=3.8.0",
+    "tqdm>=4.66.0",
+    "huggingface-hub>=0.34.0",
+]
+
+[project.scripts]
+mlx-spacey = "mlx_spacey:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"

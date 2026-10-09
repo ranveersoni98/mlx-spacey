@@ -1,0 +1,33 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Raw MAST downloads + datasets (gigabytes, refetchable)
+data/
+
+# Training outputs
+checkpoints/
+checkpoints_v2/
+*.safetensors
+candidates.csv
+sweep*.csv
+hunt.csv
+planets.txt
+fps.txt
+targets.txt
+
+# OS / editor junk
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Logs
+*.log
