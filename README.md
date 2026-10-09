@@ -1,7 +1,7 @@
 # mlx-spacey
 
 Hunt exoplanets with [MLX](https://github.com/ml-explore/mlx) and raw TESS light curves.
-No pre-processed datasets, no CSV dumps — every training example is fetched
+No pre-processed datasets, no CSV dumps. Every training example is fetched
 live from MAST, folded, and fed to a small 1D CNN running on Apple Silicon.
 
 ## Quickstart
@@ -41,10 +41,10 @@ MAST --(lightkurve)--> stitch + flatten --> BLS period search --> phase fold
   --> odd/even + SNR vetting --> PASS / REVIEW
 ```
 
-- training positives: confirmed TOIs (`CP`/`KP`); negatives: false positives
-  (`FP`/`FA`, mostly eclipsing binaries) + field stars
-- the hunting ground is `--catalog candidate`: ambiguous (`PC`/`APC`) TOIs —
-  a high `p_planet` there is worth a closer look, not a discovery claim
+- training positives: confirmed TOIs (`CP`/`KP`). Negatives: false positives
+  (`FP`/`FA`, mostly eclipsing binaries) plus field stars.
+- the hunting ground is `--catalog candidate`: ambiguous (`PC`/`APC`) TOIs.
+  A high `p_planet` there is worth a closer look, not a discovery claim.
 
 ## Layout
 
@@ -62,12 +62,12 @@ src/mlx_spacey/
 - Needs Apple Silicon (MLX) and network access (MAST + NASA Exoplanet Archive TAP).
 - `data/` (downloads, TOI cache) and `checkpoints/` (weights) are gitignored.
   Result CSVs (`candidates.csv`, sweeps) are gitignored too.
-- `numpy` stays on purpose — mlx, astropy and lightkurve all compute on it.
+- `numpy` stays on purpose. mlx, astropy and lightkurve all compute on it.
   Nothing here imports pandas or scikit-learn directly.
 
 ## License
 
-Code is MIT — see [LICENSE](LICENSE).
+Code is MIT. See [LICENSE](LICENSE).
 
 <p align="center">
   Built with <3 and a lot of bad decisions! by <a href="https://ranveersoni.me">Ranveer Soni</a>
